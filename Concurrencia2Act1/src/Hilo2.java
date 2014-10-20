@@ -3,7 +3,12 @@ import java.util.logging.Logger;
 
 
 public class Hilo2 extends Thread {
-	static final Object monitor = new Object();
+	 Object monitor = null;
+	
+	 public Hilo2(Object monitor){
+		 this.monitor=monitor;
+	 }
+	
 
     @Override
     public void run() {
@@ -20,7 +25,7 @@ public class Hilo2 extends Thread {
                     Logger.getLogger(Hilo2.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-            monitor.notify();
+            
         }
     }
 }
