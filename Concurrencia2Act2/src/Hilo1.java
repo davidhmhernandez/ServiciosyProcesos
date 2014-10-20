@@ -28,7 +28,6 @@ public class Hilo1 extends Thread {
 					}
 				}
 			}
-			monitor.notify();
 		}
 
 	}
