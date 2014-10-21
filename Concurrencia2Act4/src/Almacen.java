@@ -1,5 +1,14 @@
 public class Almacen {
 	private int galletas = 10;
+	private boolean terminado = false;
+
+	public boolean isTerminado() {
+		return terminado;
+	}
+
+	public void setTerminado(boolean terminado) {
+		this.terminado = terminado;
+	}
 
 	/**
 	 * Comer Galletas
@@ -16,7 +25,7 @@ public class Almacen {
 	 */
 	public void reponer() {
 		this.galletas = 10;
-		System.out.println("Reponemos hay 10");
+		System.out.println("Reponemos hay "+this.galletas);
 	}
 
 	/**

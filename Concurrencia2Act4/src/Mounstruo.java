@@ -32,9 +32,12 @@ public class Mounstruo extends Thread {
 						Logger.getLogger(Mounstruo.class.getName()).log(
 								Level.SEVERE, null, ex);
 					}
-				}
+				}if(almacen.isTerminado())break;
 			}
 		}
+		//**	Aqui **/
+		
+		System.out.println(Thread.currentThread().getName() + " termino ok");
 	}
 
 }
