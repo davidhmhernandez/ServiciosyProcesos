@@ -59,7 +59,7 @@ public class Sincronizaor {
 						+ " Espera ");
 				try {
 //					notify();
-					this.wait(1000);
+					this.wait();
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
