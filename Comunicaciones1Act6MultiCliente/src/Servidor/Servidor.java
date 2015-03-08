@@ -8,6 +8,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 
+//import Banco.Tarjeta;
+
 public class Servidor extends Thread{
 	private ServerSocket ss;
 	private Socket s;
@@ -21,6 +23,7 @@ public class Servidor extends Thread{
 
 	@Override
 	public void run() {
+		rellenoArrayList(tarjetas);
 		PrintWriter salidaAlCliente = null;
 		try {
 			// inicializamos la salida y entrada del cliente
@@ -163,6 +166,19 @@ public class Servidor extends Thread{
 		default:
 			return false;
 		}
+	}
+	private static void rellenoArrayList(ArrayList<Tarjeta> tarjetas) {
+		Tarjeta tarjeta = new Tarjeta(11111111, 2222, 1000);
+		tarjetas.add(tarjeta);
+
+		Tarjeta tarjeta2 = new Tarjeta(22222222, 3333, 7000);
+		tarjetas.add(tarjeta2);
+
+		Tarjeta tarjeta3 = new Tarjeta(33333333, 4444, 5000);
+		tarjetas.add(tarjeta3);
+
+		Tarjeta tarjeta4 = new Tarjeta(44444444, 5555, 10000);
+		tarjetas.add(tarjeta4);
 	}
 
 }
